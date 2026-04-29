@@ -181,7 +181,7 @@ graph TD
         CAMERA[react-native-camera-kit\nQR scanning]
         BLOBUTIL[react-native-blob-util\nfile download]
         IMGPICKER[react-native-image-picker\nphoto/doc picker]
-        DOCPICKER[@react-native-documents/picker\ndocument picker]
+        DOCPICKER["rn-documents-picker\ndocument picker"]
         SENTRY_SDK[Sentry SDK\ncrash tracking]
         FCM_SDK[Firebase Messaging\npush notifications]
         RNFS[react-native-fs\nfile system ops]
@@ -262,10 +262,10 @@ graph TD
     end
 
     subgraph "API Routes"
-        API_QR[/api/web-sessions/create\nGenerate QR session token]
-        API_EMAIL[/api/web-sessions/create-email\nEmail session creation]
-        API_SIGNED[/api/files/signed-url\nGet download URL]
-        API_DELETE[/api/delete-account\nPermanent account deletion]
+        API_QR["api/web-sessions/create\nGenerate QR session token"]
+        API_EMAIL["api/web-sessions/create-email\nEmail session creation"]
+        API_SIGNED["api/files/signed-url\nGet download URL"]
+        API_DELETE["api/delete-account\nPermanent account deletion"]
     end
 
     subgraph "Hooks"
@@ -350,12 +350,12 @@ graph TD
         end
 
         subgraph "Blog System"
-            BLOG_CONTENT[/src/content/blogs/\n*.md files\ngray-matter frontmatter]
+            BLOG_CONTENT["src/content/blogs\nMarkdown files\ngray-matter frontmatter"]
             BLOG_UTILS[Blog utilities\nparser + router]
         end
 
         subgraph "API Handler"
-            EMAIL_API[/api/send-email.ts\nResend integration]
+            EMAIL_API["api/send-email.ts\nResend integration"]
         end
 
         subgraph "Shared Components"
@@ -368,7 +368,7 @@ graph TD
     subgraph "External"
         RESEND_EXT[Resend API\nEmail delivery]
         VERCEL_EXT[Vercel Edge Network\nGlobal CDN]
-        APK[/public/appapk/\nAndroid APK download]
+        APK["public/appapk\nAndroid APK download"]
     end
 
     ENTRY --> APP_TSX
